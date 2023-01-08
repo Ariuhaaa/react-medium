@@ -74,11 +74,10 @@ let News =[
       para = {data.para}
       button = {data.button}
       />
-    {/* <Section1 News = {News}/> */}
+      <Section1 News= {News} />
     </div>
-  );
+  ) 
 }
-
 export default App;
 
 
