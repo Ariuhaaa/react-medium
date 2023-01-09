@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
 }
-/* .container {
+.container {
     width: 1280px;
-} */
+}
 body {
     margin: 0;
     padding: 0;
@@ -34,11 +34,10 @@ body {
     /* display: flex;
     justify-content: space-between; */
 }
-.text {
+/* .text {
     margin-left: 50px;
-    margin-top: -22px;
     padding-top: 150px;
-}
+} */
 .btn1 {
     background-color: #191919;
     color: #ffffff;

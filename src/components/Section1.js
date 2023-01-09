@@ -1,11 +1,12 @@
-export default function Section1 ({id, head,title,date,isTrending,category,key,read,createdUser}) {
-    // console.log(News);
-    return (
-        {News.map((c)=>{
-            return (
-            <div>
+export default function Section1({ News }) {
+  return (
+    <div>
+      {News.map((c) => {
+        return (
+            <div className="row">
+          
                 <p>id{c.id}</p>
-                <img alt=""/>
+                <img alt="" />
                 <p>head{c.head}</p>
                 <p>title{c.title}</p>
                 <p>date{c.date}</p>
@@ -15,7 +16,7 @@ export default function Section1 ({id, head,title,date,isTrending,category,key,r
                 <p>read{c.read}</p>
                 <p>createdUser{c.createdUser}</p>
             </div>
-            )
-        })
-    )
-}
+            );
+            
+        })}
+  );}
