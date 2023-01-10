@@ -10,10 +10,10 @@ function Menu({ sent }) {
             alt="logo"
           />
         </div>
-        <div>
-          <ul>
+        <div className="left d-flex col-md-6">
+          <ul className="list">
             {sent.map((e) => {
-              return <li>{e}</li>;
+              return <span className="d-flex col-md-6" >{e}</span>;
             })}
           </ul>
           <button className="btn">Get Started</button>

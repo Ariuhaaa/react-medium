@@ -97,7 +97,7 @@ function App() {
     <div className="container-fluid p-0">
       <Menu sent={data.menu} />
       <Header title={data.title} para={data.para} button={data.button} />
-      <Section1 News={News} />
+      {/* <Section1 news={News} /> */}
     </div>
   );
 }
