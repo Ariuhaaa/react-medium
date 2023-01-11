@@ -2,8 +2,12 @@ import "./App.css";
 import Menu from "./components/Menu";
 import Header from "./components/Header";
 import Section1 from "./components/Section1";
+import { useState } from "react";
+import SignIn from "./SignIn";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   let data = {
     menu: ["Our story", "Membership", "Write", "Sign In"],
     title: "Stay curious",
@@ -95,8 +99,8 @@ function App() {
     },
   ];
   return (
-    <div className="container-fluid p-0">
-      <Menu sent={data.menu} />
+    <div>
+      {<Menu sent={data.menu} />}
       <Header title={data.title} para={data.para} button={data.button} />
       <Section1 news={News} />
     </div>

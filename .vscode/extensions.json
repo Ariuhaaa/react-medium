@@ -1,3 +1,6 @@
 {
-  "recommendations": ["formulahendry.auto-close-tag"]
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "christian-kohler.path-intellisense"
+  ]
 }
