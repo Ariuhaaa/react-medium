@@ -1,12 +1,13 @@
 import { useState } from "react";
 import SignIn from "../SignIn";
 
-function Menu({ sent }) {
+function Menu({ sent, onLogin, user }) {
   const [show, setShow] = useState(false);
   console.log(sent);
   function showModal() {
     setShow(!show);
   }
+
   return (
     <div className="Big">
       <div className=" p-0">
@@ -26,13 +27,18 @@ function Menu({ sent }) {
             <span>Our story</span>
             <span>Membership</span>
             <span>Write</span>
-            <span className="sign" onClick={showModal}>
-              Sign In
-            </span>
+
+            {user ? (
+              <span>{user}</span>
+            ) : (
+              <span className="sign" onClick={showModal}>
+                Sign In
+              </span>
+            )}
           </div>
           {/* </ul> */}
           <button className="btn">Get Started</button>
-          <SignIn show={show} />
+          <SignIn onLogin={onLogin} show={show} setShow={setShow} />
         </div>
       </div>
     </div>

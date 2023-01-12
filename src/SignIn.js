@@ -1,13 +1,18 @@
 import { useState } from "react";
 
-export default function SignIn({ show }) {
+export default function SignIn({ show, setShow, onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dis = show ? "block" : "none";
   return (
-    <div className="row modal " style={{ display: dis }}>
-      <div className="modal-body">
+    <div
+      className="row modal "
+      style={{ display: dis }}
+      onClick={() => setShow(false)}
+    >
+      <div className="modal-body" onClick={(e) => e.stopPropagation()}>
         <div className="mb-3">
+          <h2>Sign In</h2>
           <label className="form-label">Username</label>
           <input
             className="form-control"
@@ -25,9 +30,19 @@ export default function SignIn({ show }) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className="nevtreh" onClick={() => show(username, password)}>
-          Nevtreh
-        </button>
+        <div>
+          <button
+            className="btn btn-success"
+            onClick={() => {
+              onLogin(username, password);
+
+              setShow(false);
+            }}
+          >
+            Нэвтрэх
+          </button>
+          <button className="btn btn-danger">Хаах</button>
+        </div>
       </div>
     </div>
   );
