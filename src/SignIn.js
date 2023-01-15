@@ -35,13 +35,12 @@ export default function SignIn({ show, setShow, onLogin }) {
             className="btn btn-success"
             onClick={() => {
               onLogin(username, password);
-
               setShow(false);
             }}
           >
             Нэвтрэх
           </button>
-          <button className="btn btn-danger">Хаах</button>
+          <button className="btn btn-danger" onClick={() => setShow(false)}>Хаах</button>
         </div>
       </div>
     </div>

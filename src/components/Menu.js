@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SignIn from "../SignIn";
+import Hand from "./Hand";
 
 function Menu({ sent, onLogin, user }) {
   const [show, setShow] = useState(false);
@@ -9,9 +10,8 @@ function Menu({ sent, onLogin, user }) {
   }
 
   return (
-    <div className="Big">
-      <div className=" p-0">
-        <div className="menu">
+    <div className="menu">
+        <div className="menu container">
           <div>
             <img
               width={150}
@@ -40,7 +40,7 @@ function Menu({ sent, onLogin, user }) {
           <button className="btn">Get Started</button>
           <SignIn onLogin={onLogin} show={show} setShow={setShow} />
         </div>
-      </div>
+     
     </div>
   );
 }

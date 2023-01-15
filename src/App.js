@@ -5,6 +5,8 @@ import Section1 from "./components/Section1";
 import { useState } from "react";
 import SignIn from "./SignIn";
 import News from "./components/data";
+import Section from "./components/Section";
+import Hand from "./components/Hand";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,13 +15,18 @@ function App() {
 
   let data = {
     menu: ["Our story", "Membership", "Write", "Sign In"],
-    title: "Stay curious",
+    title: "Stay curious.",
     para: "Discover stories, thinking, and expertise from writers on any topic.",
     button: "Start Reading",
+    footer: ["Help", "Status", "Writers", "Blog", "Careers", "Privacy", "Terms", "About"," Text to speech "]
   };
+  const list = ["Programming", "Data Science", "Technology","Self Improvement", "Writing",
+  "Relationships","Machine Learning","Productivity", "Politics" ]
+
+
 
   const onLogin = (username, password) => {
-    //ididi
+    //id
 
     setUser(username);
     console.log(username, password);
@@ -31,8 +38,11 @@ function App() {
       {!user && (
         <Header title={data.title} para={data.para} button={data.button} />
       )}
-      <Section1 news={News} user={user} />
+      <Section Lists = {News.Lists}/>
+    
+      <Section1 news={News} user={user} list={list} footer = {data.footer}/>
     </div>
   );
 }
+
 export default App;
