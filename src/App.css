@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* position: fixed; */
 }
 
 .btn {
@@ -53,7 +54,7 @@ h1 {
 }
 
 .zurag {
-    width: 80px;
+    width: 60px;
     height: 60px;
 }
 
@@ -110,7 +111,19 @@ h1 {
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
+    color: gray;
+}
+
+.section1{
+    margin-top: 50px;
+}
+/* .right {
+    position: fixed;
+} */
+.oba {
+    width: 60px;
+    height: 60px;
+}
+.num {
     color: gray;
 }
