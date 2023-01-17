@@ -37,8 +37,8 @@ let Lists = [
   {
     num: "06",
     img: require("./images/Section/download.jpeg"),
-    ner: "What You Probably Don't know About Your Pastor When He Preaches",
-    title: "Ukraine War",
+    ner: "Ukraine War",
+    title: "What You Probably Don't know About Your Pastor When He Preaches",
     date: "Jan 4 . 5 min read",
   },
 ];

@@ -12,7 +12,7 @@ let News = [
     createdUser: {
       Name: "Dr. Tom Frieden",
       userId: "1",
-      img: require("../components/images/Section/surreal-image-african-elephant-wearing-260nw-1365289022.webp"),
+      img: require("../components/images/Section/img_forest.jpeg"),
     },
   },
   {
@@ -28,7 +28,7 @@ let News = [
     createdUser: {
       Name: "David Bowles",
       userId: "2",
-      img: require("../components/images/Section/surreal-image-african-elephant-wearing-260nw-1365289022.webp"),
+      img: require("../components/images/Section/img_forest.jpeg"),
     },
   },
   {
@@ -45,7 +45,7 @@ let News = [
     createdUser: {
       Name: "Ed Erginziger",
       userId: "3",
-      img: require("../components/images/Section/surreal-image-african-elephant-wearing-260nw-1365289022.webp"),
+      img: require("../components/images/Section/img_forest.jpeg"),
     },
   },
 
@@ -62,7 +62,7 @@ let News = [
     createdUser: {
       Name: "Thomas Smith",
       userId: "4",
-      img: require("../components/images/Section/surreal-image-african-elephant-wearing-260nw-1365289022.webp"),
+      img: require("../components/images/Section/img_forest.jpeg"),
     },
   },
   {
@@ -79,7 +79,7 @@ let News = [
     createdUser: {
       Name: "Allegra Hobbs",
       userId: "5",
-      img: require("../components/images/Section/surreal-image-african-elephant-wearing-260nw-1365289022.webp"),
+      img: require("../components/images/Section/img_forest.jpeg"),
     },
   },
 ];
