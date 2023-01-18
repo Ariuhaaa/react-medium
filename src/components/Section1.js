@@ -29,6 +29,7 @@ export default function Section1({ news, list, footer }) {
           })}
         </div>
         <div className="col-4 right">
+          <br/>
           <h6>DISCOVER MORE OF WHAT MATTERS TO YOU</h6>
           <div>
             {list.map((e) => {
@@ -43,6 +44,7 @@ export default function Section1({ news, list, footer }) {
           </div>
         </div>
       </div>
+      <br/>
     </div>
   );
 }

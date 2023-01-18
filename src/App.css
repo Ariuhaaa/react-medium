@@ -114,30 +114,10 @@ h1 {
     color: gray;
 }
 
-.section1{
+.section1 {
     margin-top: 50px;
 }
-/* .right {
-    position: fixed;
-} */
-/* .oba {
-    width: 60px;
-    height: 60px;
-} */
+
 .num {
     color: gray;
 }
-/* .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    background-color: #2196F3;
-    padding: 10px;
-  }
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  } */
