@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function SignIn({ show, setShow, onLogin }) {
+export default function SignIn({ show, setShow, onLogin, setAdmin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dis = show ? "block" : "none";
+  const navigate = useNavigate();
+
   return (
     <div
       className="row modal "
@@ -40,7 +43,18 @@ export default function SignIn({ show, setShow, onLogin }) {
           >
             Нэвтрэх
           </button>
-          <button className="btn btn-danger" onClick={() => setShow(false)}>Хаах</button>
+          <button
+            className="btn btn-success"
+            onClick={() => {
+              setAdmin(true);
+              navigate("/login");
+            }}
+          >
+            Go to Admin Page
+          </button>
+          <button className="btn btn-danger" onClick={() => setShow(false)}>
+            Хаах
+          </button>
         </div>
       </div>
     </div>

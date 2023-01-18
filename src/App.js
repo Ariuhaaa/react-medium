@@ -8,11 +8,16 @@ import News from "./components/data";
 import Section from "./components/Section";
 import Hand from "./components/Hand";
 import Lists from "./components/lists";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import Login from "./components/Login";
+import Admin from "./components/Admin";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [user, setUser] = useState();
+  const [admin, setAdmin] = useState(false);
 
   let data = {
     menu: ["Our story", "Membership", "Write", "Sign In"],
@@ -52,13 +57,30 @@ function App() {
 
   return (
     <div>
-      <Menu sent={data.menu} onLogin={onLogin} user={user} />
-      {!user && (
-        <Header title={data.title} para={data.para} button={data.button} />
-      )}
-      <Section Lists={Lists} />
+      {!admin ? (
+        <>
+          <Menu
+            sent={data.menu}
+            onLogin={onLogin}
+            user={user}
+            setAdmin={setAdmin}
+          />
 
-      <Section1 news={News} user={user} list={list} footer={data.footer} />
+          {!user && (
+            <Header title={data.title} para={data.para} button={data.button} />
+          )}
+          <Section Lists={Lists} />
+          <Section1 news={News} user={user} list={list} footer={data.footer} />
+          <Routes>
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </>
+      ) : (
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      )}
     </div>
   );
 }
