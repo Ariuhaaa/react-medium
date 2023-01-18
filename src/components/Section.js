@@ -18,7 +18,7 @@ export default function Section({ Lists }) {
                   <div className="col-3">
                     <img className="oba w-100" src={e.img} alt="a" />
                   </div>
-                  <h5 className="col-9">{e.ner}</h5>
+                  <p className="col-9 ner">{e.ner}</p>
                 </div>
                 <p>{e.title}</p>
                 <p>{e.date}</p>
