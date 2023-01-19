@@ -12,12 +12,14 @@ import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Login from "./components/Login";
 import Admin from "./components/Admin";
+import Page from "./components/Page";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [user, setUser] = useState();
   const [admin, setAdmin] = useState(false);
+  const [write, setWrite] = useState(true);
 
   let data = {
     menu: ["Our story", "Membership", "Write", "Sign In"],
@@ -64,8 +66,8 @@ function App() {
             onLogin={onLogin}
             user={user}
             setAdmin={setAdmin}
+            setWrite={setWrite}
           />
-
           {!user && (
             <Header title={data.title} para={data.para} button={data.button} />
           )}

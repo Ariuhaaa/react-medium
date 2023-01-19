@@ -2,7 +2,7 @@ import { useState } from "react";
 import SignIn from "../SignIn";
 import Hand from "./Hand";
 
-function Menu({ sent, onLogin, user, setAdmin }) {
+function Menu({ sent, onLogin, user, setAdmin, setWrite }) {
   const [show, setShow] = useState(false);
   console.log(sent);
   function showModal() {
