@@ -121,8 +121,13 @@ h1 {
 .num {
     color: gray;
 }
+
 .sign {
     width: 50px;
     align-items: center;
     border-radius: 5px;
+}
+
+.ner {
+    font-weight: 700;
 }
