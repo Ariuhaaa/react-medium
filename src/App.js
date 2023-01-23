@@ -52,8 +52,6 @@ function App() {
   ];
 
   const onLogin = (username, password) => {
-    //id
-
     setUser(username);
     console.log(username, password);
   };
