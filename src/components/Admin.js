@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import User from "../User";
 import { BarCharts } from "./BarCharts";
 
 export default function Admin() {
   const [data, setData] = useState([]);
   // const[loading]
+
+  const [userModal, setUserModal] = useState(false);
 
   useEffect(() => {
     fetch("http://192.168.1.50:4040/news")
@@ -13,30 +16,35 @@ export default function Admin() {
         setData(dt.news);
       });
   }, []);
-
+  function handleUser() {
+    setUserModal(!userModal);
+  }
   return (
     <div>
       <div className="navbar bg-dark flex-nowrap">
-        <a href="#" className="col-md-3 navbar-brand text-light">
+        <a href="#" className="col-md-3 navbar-brand text-light mx-5">
           Company Name
         </a>
-        <input type="text" className="w-100 form-control bg-dark border-0" />
+        <input type="text" className="w-75 form-control bg-light border-0" />
         <div className="nav text-nowrap">
-          <span className="text-light"> Log Out </span>
+          <span className="text-light mx-5"> Log Out </span>
         </div>
       </div>
 
       <div className="container-fluid">
-        <div className="row">
+        <div className="row  mx-5">
           <div className="col-md-3">
-            <div className="nav bg-light flex-column">
+            <div
+              className="nav bg-light flex-column"
+              onClick={(e) => e.preventDefault()}
+            >
               <div className="nav-item">
                 <a href="nav-link">Dashboard</a>
               </div>
               <div className="nav-item">
                 <a href="nav-link">News</a>
               </div>
-              <div className="nav-item">
+              <div className="nav-item" onClick={handleUser}>
                 <a href="nav-link">Users</a>
               </div>
             </div>
@@ -118,6 +126,12 @@ export default function Admin() {
           </div>
         </div>
       </div>
+
+      <User
+        userModal={userModal}
+        setUserModal={setUserModal}
+        handleUser={handleUser}
+      />
     </div>
   );
 }

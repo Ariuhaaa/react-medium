@@ -13,6 +13,7 @@ import About from "./components/About";
 import Login from "./components/Login";
 import Admin from "./components/Admin";
 import Page from "./components/Page";
+import User from "./User";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
