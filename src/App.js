@@ -1,19 +1,21 @@
 import "./App.css";
 import Menu from "./components/Menu";
-import Header from "./components/Header";
-import Section1 from "./components/Section1";
+// import Header from "./components/Header";
+// import Section1 from "./components/Section1";
 import { useState } from "react";
-import SignIn from "./SignIn";
-import News from "./components/data";
-import Section from "./components/Section";
-import Hand from "./components/Hand";
-import Lists from "./components/lists";
+// import SignIn from "./SignIn";
+// import News from "./components/data";
+//
+// import Lists from "./components/lists";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Login from "./components/Login";
 import Admin from "./components/Admin";
-import Page from "./components/Page";
-import User from "./User";
+// import Page from "./components/Page";
+// import User from "./User";
+import AdminLayout from "./components/AdminLayout";
+import Users from "./components/Users";
+import MainNews from "./components/MainNews";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -58,7 +60,7 @@ function App() {
 
   return (
     <div>
-      {!admin ? (
+      {/* {!admin ? (
         <>
           <Menu
             sent={data.menu}
@@ -81,7 +83,38 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      )}
+      )} */}
+
+      <Routes>
+        <Route
+          element={
+            <Menu
+              sent={data.menu}
+              onLogin={onLogin}
+              user={user}
+              setAdmin={setAdmin}
+              setWrite={setWrite}
+            />
+          }
+        >
+          <Route
+            index
+            path="/"
+            element={<MainNews user={user} data={data} list={list} />}
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/newsdetails/:id" element={<About />} />
+        </Route>
+      </Routes>
+
+      <Routes>
+        <Route path="/login" element={<Login />} />
+
+        <Route element={<AdminLayout />}>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/users" element={<Users />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
