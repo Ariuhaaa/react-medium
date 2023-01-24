@@ -16,6 +16,7 @@ import Admin from "./components/Admin";
 import AdminLayout from "./components/AdminLayout";
 import Users from "./components/Users";
 import MainNews from "./components/MainNews";
+import News from "./components/News";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -109,9 +110,9 @@ function App() {
 
       <Routes>
         <Route path="/login" element={<Login />} />
-
         <Route element={<AdminLayout />}>
           <Route path="/admin" element={<Admin />} />
+          <Route path="/news" element={<News />} />
           <Route path="/users" element={<Users />} />
         </Route>
       </Routes>

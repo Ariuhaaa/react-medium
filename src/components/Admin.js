@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import User from "../User";
+// import User from "../User";
 import { BarCharts } from "./BarCharts";
 
 export default function Admin() {
   const [data, setData] = useState([]);
-  // const[loading]
+  // const[loading, setLoading] = useState();
 
   const [userModal, setUserModal] = useState(false);
 
